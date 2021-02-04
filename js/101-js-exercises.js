@@ -591,7 +591,7 @@ addToDone("Exercise 37 is correct.")
 // Exercise 38
 // Write a function definition named sumOfSquares that takes in two numbers, squares each number, then returns the sum of both squares.
 function sumOfSquares(x, y) {
-    return (Math.pow(x, 2) + Math.pow(y, 2));
+    return square(x) + square(y);
 }
 
 assert(sumOfSquares(3, 2), 13, "Exercise 38");

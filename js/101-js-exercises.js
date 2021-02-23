@@ -1253,7 +1253,7 @@ addToDone("Exercise 80 is correct.")
 // Exercise 81
 // Write a function definition named shortestString that takes in an array of strings and returns the shortest string in the array.
 function shortestString(arr) {
-    var longString = "strings are dumb";
+    var longString = "strings are cool";
     for(var i = 0; i < arr.length; i += 1) {
         if(arr[i].length < longString.length) {
             longString = arr[i];
@@ -1322,9 +1322,7 @@ addToDone("Exercise 84 is correct.")
 
 // Exercise 85
 // Write a function named flatten that takes in an array of arrays. Return the flattened array.
-function flatten(arr) {
-    return arr.flat();
-}
+let flatten = arr => arr.flat();
 
 assert(flatten([[1, 2], [3, 4], [5, 6]]), [1, 2, 3, 4, 5, 6], "Exercise 85");
 assert(flatten([[1, 2, 3], [1, 2, 3], [1, 2, 3]]), [1, 2, 3, 1, 2, 3, 1, 2, 3], "Exercise 85");
@@ -1368,9 +1366,7 @@ const thomasPaper = {
 
 // Exercise 87
 // Write a function named getPaperTitle that takes in a object and returns the title property
-function getPaperTitle(obj) {
-    return obj.title;
-}
+let getPaperTitle = obj => obj.title;
 
 assert(getPaperTitle(tukeyPaper), "The Future of Data Analysis", "Exercise 87");
 assert(getPaperTitle(thomasPaper), "A mathematical model of glutathione metabolism", "Exercise 87");
@@ -1379,9 +1375,7 @@ addToDone("Exercise 87 is correct.")
 
 // Exercise 88
 // Write a function named getYearPublished that takes in an objects and returns the value behind the "year_published" key.
-function getYearPublished(obj) {
-    return obj.year_published;
-}
+let getYearPublished = obj => obj.year_published;
 
 assert(getYearPublished(tukeyPaper), 1962, "Exercise 88");
 assert(getYearPublished(thomasPaper), 2008, "Exercise 88");
@@ -1397,9 +1391,7 @@ const book = {
 
 // Exercise 89
 // Write a function named getPrice that takes in a object and returns the price
-function getPrice(obj) {
-    return obj.price;
-}
+let getPrice = obj => obj.price;
 
 assert(getPrice(book), 36.99, "Exercise 89");
 addToDone("Exercise 89 is complete.")
@@ -1408,9 +1400,7 @@ addToDone("Exercise 89 is complete.")
 
 // Exercise 90
 // Write a function named getBookAuthor that takes in a object (the above declared book variable) and returns the author's name
-function getBookAuthor(obj) {
-    return obj.author;
-}
+let getBookAuthor = obj => obj.author;
 
 assert(getBookAuthor(book), "Frances Buontempo", "Exercise 90");
 addToDone("Exercise 90 is complete.")
@@ -1445,9 +1435,7 @@ const books = [
 
 // Exercise 91
 // Write a function named getNumberOfBooks that takes in a array of objects and returns the number of objects in that array.
-function getNumberOfBooks(arr) {
-    return arr.length;
-}
+let getNumberOfBooks = arr => arr.length;
 
 assert(getNumberOfBooks(books), 4, "Exercise 91");
 addToDone("Exercise 91 is complete.")
@@ -1569,9 +1557,7 @@ const shoppingCart = {
 // Exercise 96
 // Write a function named getTaxRate that takes in the above shopping cart as input and returns the tax rate.
 // Hint: How do you access a key's value on a object? The tax rate is one key of the entire shoppingCart object.
-function getTaxRate(shoppingCart) {
-    return shoppingCart.tax;
-}
+let getTaxRate = shoppingCart => shoppingCart.tax;
 
 assert(getTaxRate(shoppingCart), .08, "Exercise 96");
 addToDone("Exercise 96 is complete")

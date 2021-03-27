@@ -374,9 +374,11 @@ addToDone("Exercise 20 is correct.")
 
 // Exercise 21
 // Write a function definition named half that takes in a number and returns half the provided number.
-function half(num) {
-    return num / 2
-}
+const half = num => num / 2; // es6 refactor
+
+// function half(num) {
+//     return num / 2
+// }
 
 assert(half(4), 2, "Exercise 21");
 assert(half(5), 2.5, "Exercise 21");
@@ -390,9 +392,11 @@ addToDone("Exercise 21 is correct.")
 
 // Exercise 22
 // Write a function definition named double that takes in a number and returns double the provided number.
-function double(num) {
-    return num * 2;
-}
+const double = num => num * 2; // es6 refactor
+
+// function double(num) {
+//     return num * 2;
+// }
 
 assert(double(4), 8, "Exercise 22");
 assert(double(5), 10, "Exercise 22");
@@ -406,9 +410,11 @@ addToDone("Exercise 22 is correct.")
 
 // Exercise 23
 // Write a function definition named triple that takes in a number and returns triple the provided number.
-function triple(num) {
-    return num * 3;
-}
+const triple = num => num * 3; // es6 refactor
+
+// function triple(num) {
+//     return num * 3;
+// }
 
 assert(triple(4), 12, "Exercise 23");
 assert(triple(5), 15, "Exercise 23");

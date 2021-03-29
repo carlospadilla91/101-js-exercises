@@ -561,9 +561,11 @@ addToDone("Exercise 31 is correct.")
 
 // Exercise 32
 // Write a function definition named squareRoot that takes in a number and returns the square root of the provided number
-function squareRoot(num) {
-    return Math.sqrt(num);
-}
+const squareRoot = num => Math.sqrt(num); // es6 refactor
+
+// function squareRoot(num) {
+//     return Math.sqrt(num);
+// }
 
 assert(squareRoot(4), 2.0, "Exercise 32");
 assert(squareRoot(64), 8.0, "Exercise 32");
@@ -573,9 +575,11 @@ addToDone("Exercise 32 is correct.")
 
 // Exercise 33
 // Write a function definition named subtract that takes in two numbers and returns the first minus the second argument.
-function subtract(x, y) {
-    return x - y;
-}
+const subtract = (x,y) => x - y; // es6 refactor
+
+// function subtract(x, y) {
+//     return x - y;
+// }
 
 assert(subtract(8, 6), 2, "Exercise 33");
 assert(subtract(27, 4), 23, "Exercise 33");
@@ -586,9 +590,11 @@ addToDone("Exercise 33 is correct.")
 
 // Exercise 34
 // Write a function definition named multiply that takes in two numbers and returns the first times the second argument.
-function multiply(x, y) {
-    return x * y;
-}
+const multiply = (x,y) => x * y; // es6 refactor
+
+// function multiply(x, y) {
+//     return x * y;
+// }
 
 assert(multiply(2, 1), 2, "Exercise 34");
 assert(multiply(3, 5), 15, "Exercise 34");
@@ -599,9 +605,11 @@ addToDone("Exercise 34 is correct.")
 
 // Exercise 35
 // Write a function definition named divide that takes in two numbers and returns the first argument divided by the second argument.
-function divide(x, y) {
-    return x / y;
-}
+const divide = (x,y) => x / y; // es6 refactor
+
+// function divide(x, y) {
+//     return x / y;
+// }
 
 assert(divide(27, 9), 3, "Exercise 35");
 assert(divide(15, 3), 5, "Exercise 35");

@@ -779,16 +779,27 @@ addToDone("Exercise 44 is correct.")
 
 // Exercise 45
 // Write a function definition named countVowels that takes in value and returns the count of the number of vowels in a sequence.
-function countVowels(value) {
-    var vowelList = 'aeiouAEIOU';
-    var vowelCount = 0;
-    for(var i = 0; i < value.length; i += 1) {
-        if(vowelList.indexOf(value[i]) !== -1) {
-            vowelCount++
+const countVowels = value => {          // es6 refactor
+    let count = 0;
+    let vowelList = 'aeiouAEIOU';
+    for (let i = 0; i < value.length; i += 1) {
+        if (vowelList.indexOf(value[i]) !== -1) {
+            count ++;
         }
     }
-    return vowelCount;
-}
+    return count;
+};
+
+// function countVowels(value) {
+//     var vowelList = 'aeiouAEIOU';
+//     var vowelCount = 0;
+//     for(var i = 0; i < value.length; i += 1) {
+//         if(vowelList.indexOf(value[i]) !== -1) {
+//             vowelCount++
+//         }
+//     }
+//     return vowelCount;
+// }
 
 assert(countVowels("banana"), 3, "Exercise 45");
 assert(countVowels("ubuntu"), 3, "Exercise 45");
@@ -800,9 +811,11 @@ addToDone("Exercise 45 is correct.")
 
 // Exercise 46
 // Write a function definition named removeVowels that takes in string and returns the string without any vowels
-function removeVowels(str) {
-    return str.replace(/[aeiouAEIOU]/ig, '');
-}
+const removeVowels = str => str.replace(/[aeiouAEIOU]/ig, ''); // es6 refactor using reg exp
+
+// function removeVowels(str) {
+//     return str.replace(/[aeiouAEIOU]/ig, '');
+// }
 
 assert(removeVowels("banana"), "bnn", "Exercise 46");
 assert(removeVowels("ubuntu"), "bnt", "Exercise 46");

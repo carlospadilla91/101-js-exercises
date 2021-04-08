@@ -826,11 +826,15 @@ addToDone("Exercise 46 is correct.")
 
 // Exercise 47
 // Write a function definition named startsWithVowel that takes in string and true if the string starts with a vowel
-function startsWithVowel(str) {
-    var vowelList = 'aeiouAEIOU';
+const startsWithVowel = str => {        // es6 refactor
+    let vowelList = 'aeiouAEIOU';
     return vowelList.indexOf(str[0]) !== -1;
-
 }
+
+// function startsWithVowel(str) {
+//     var vowelList = 'aeiouAEIOU';
+//     return vowelList.indexOf(str[0]) !== -1;
+// }
 
 assert(startsWithVowel("ubuntu"), true, "Exercise 47");
 assert(startsWithVowel("banana"), false, "Exercise 47");

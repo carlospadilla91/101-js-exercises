@@ -844,10 +844,15 @@ addToDone("Exercise 47 is correct.")
 
 // Exercise 48
 // Write a function definition named endsWithVowel that takes in string and true if the string ends with a vowel
-function endsWithVowel(str) {
-    var vowelList = 'aeiouAEIOU';
-    return vowelList.indexOf(str[str.length - 1]) !== -1;
+const endsWithVowel = str => {          // es6 refactor
+    let vowelList = 'aeiouAEIOU';
+    return vowelList.indexOf(str[str.length -1]) !== -1;
 }
+
+// function endsWithVowel(str) {
+//     var vowelList = 'aeiouAEIOU';
+//     return vowelList.indexOf(str[str.length - 1]) !== -1;
+// }
 
 assert(endsWithVowel("ubuntu"), true, "Exercise 48");
 assert(endsWithVowel("banana"), true, "Exercise 48");
@@ -858,9 +863,11 @@ addToDone("Exercise 48 is correct.")
 
 // Exercise 49
 // Write a function definition named startsAndEndsWithVowel that takes in string and returns true if the string starts and ends with a vowel
-function startsAndEndsWithVowel(str) {
-    return startsWithVowel(str) && endsWithVowel(str);
-}
+const startsAndEndsWithVowel = str => startsWithVowel(str) && endsWithVowel(str); // es6 refactor
+
+// function startsAndEndsWithVowel(str) {
+//     return startsWithVowel(str) && endsWithVowel(str);
+// }
 
 assert(startsAndEndsWithVowel("ubuntu"), true, "Exercise 49");
 assert(startsAndEndsWithVowel("banana"), false, "Exercise 49");
@@ -870,9 +877,11 @@ addToDone("Exercise 49 is correct.")
 
 // Exercise 50
 // Write a function definition named first that takes in sequence and returns the first value of that sequence.
-function first(seq) {
-    return seq[0];
-}
+const first = arr => arr[0]; // es6 refactor
+
+// function first(seq) {
+//     return seq[0];
+// }
 
 assert(first("ubuntu"), "u", "Exercise 50");
 assert(first([1, 2, 3]), 1, "Exercise 50");
@@ -882,10 +891,12 @@ addToDone("Exercise 50 is correct.")
 
 // Exercise 51
 // Write a function definition named second that takes in sequence and returns the second value of that sequence.
-function second(seq) {
-    return seq[1];
-}
+const second = arr => arr[1]; // es6 refactor
 
+// function second(seq) {
+    // return seq[1];
+// }
+//
 assert(second("ubuntu"), "b", "Exercise 51");
 assert(second([1, 2, 3]), 2, "Exercise 51");
 assert(second(["JS", "is", "awesome"]), "is", "Exercise 51");
@@ -894,9 +905,11 @@ addToDone("Exercise 51 is correct.")
 
 // Exercise 52
 // Write a function definition named third that takes in sequence and returns the third value of that sequence.
-function third(seq) {
-    return seq[2];
-}
+const third = arr => arr[2]; // es6 refactor
+
+// function third(seq) {
+//     return seq[2];
+// }
 
 assert(third("ubuntu"), "u", "Exercise 52");
 assert(third([1, 2, 3]), 3, "Exercise 52");
@@ -906,9 +919,11 @@ addToDone("Exercise 52 is correct.")
 
 // Exercise 53
 // Write a function definition named forth that takes in sequence and returns the forth value of that sequence.
-function forth(seq) {
-    return seq[3];
-}
+const forth = arr => arr[3]; // es6 refactor
+
+// function forth(seq) {
+//     return seq[3];
+// }
 
 assert(forth("ubuntu"), "n", "Exercise 53");
 assert(forth([1, 2, 3, 4]), 4, "Exercise 53");
@@ -918,9 +933,11 @@ addToDone("Exercise 53 is correct.")
 
 // Exercise 54
 // Write a function definition named last that takes in sequence and returns the last value of that sequence.
-function last(seq) {
-    return seq[seq.length - 1];
-}
+const last = arr => arr[arr.length -1]; // es6 refactor
+
+// function last(seq) {
+//     return seq[seq.length - 1];
+// }
 
 assert(last("ubuntu"), "u", "Exercise 54");
 assert(last([1, 2, 3, 4]), 4, "Exercise 54");
@@ -931,9 +948,11 @@ addToDone("Exercise 54 is correct.")
 
 // Exercise 55
 // Write a function definition named secondToLast that takes in sequence and returns the second to last value of that sequence.
-function secondToLast(seq) {
-    return seq[seq.length - 2];
-}
+const secondToLast = arr => arr[arr.length -2]; // es6 refactor
+
+// function secondToLast(seq) {
+//     return seq[seq.length - 2];
+// }
 
 assert(secondToLast("ubuntu"), "t", "Exercise 55");
 assert(secondToLast([1, 2, 3, 4]), 3, "Exercise 55");

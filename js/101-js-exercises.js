@@ -963,9 +963,11 @@ addToDone("Exercise 55 is correct.")
 
 // Exercise 56
 // Write a function definition named thirdToLast that takes in sequence and returns the third to last value of that sequence.
-function thirdToLast(seq) {
-    return seq[seq.length - 3];
-}
+const thirdToLast = arr => arr[arr.length -3]; // es6 refactor
+
+// function thirdToLast(seq) {
+//     return seq[seq.length - 3];
+// }
 
 assert(thirdToLast("ubuntu"), "n", "Exercise 56");
 assert(thirdToLast([1, 2, 3, 4]), 2, "Exercise 56");
@@ -976,9 +978,11 @@ addToDone("Exercise 56 is correct.")
 
 // Exercise 57
 // Write a function definition named firstAndSecond that takes in sequence and returns the first and second value of that sequence as an array
-function firstAndSecond(seq) {
-    return [first(seq), second(seq)];
-}
+const firstAndSecond = arr => [first(arr), second(arr)]; // es6 refactor
+
+// function firstAndSecond(seq) {
+//     return [first(seq), second(seq)];
+// }
 
 assert(firstAndSecond([1, 2, 3, 4]), [1, 2], "Exercise 57");
 assert(firstAndSecond(["JS", "is", "awesome"]), ["JS", "is"], "Exercise 57");
@@ -988,9 +992,11 @@ addToDone("Exercise 57 is correct.")
 
 // Exercise 58
 // Write a function definition named firstAndLast that takes in sequence and returns the first and last value of that sequence as an array
-function firstAndLast(seq) {
-    return [first(seq), last(seq)];
-}
+const firstAndLast = arr => [first(arr), last(arr)]; // es6 refactor
+
+// function firstAndLast(seq) {
+//     return [first(seq), last(seq)];
+// }
 
 assert(firstAndLast([1, 2, 3, 4]), [1, 4], "Exercise 58");
 assert(firstAndLast(["JS", "is", "awesome"]), ["JS", "awesome"], "Exercise 58");

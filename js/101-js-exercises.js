@@ -1054,11 +1054,17 @@ addToDone("Exercise 61 is correct.")
 
 // Exercise 62
 // Write a function definition named median that takes in sequence of numbers and returns the average value
-function median(arr) {
-    const mid = Math.floor(arr.length / 2),
-        nums = [...arr].sort((a, b) => a - b);
-    return arr.length % 2 !== 0 ? nums[mid] : (nums[mid - 1] + nums[mid]) / 2;
-}
+const median = arr => arr.reduce((accumulator, currentNumber) => {  // es6 refactor
+    let arrSort =  arr.sort();
+    let mid = Math.floor(arr.length / 2); //2
+    return arr.length % 2 !== 0 ? arrSort[mid] : (arrSort[mid - 1] + arrSort[mid]) / 2;
+});
+
+// function median(arr) {
+//     const mid = Math.floor(arr.length / 2),
+//         nums = [...arr].sort((a, b) => a - b);
+//     return arr.length % 2 !== 0 ? nums[mid] : (nums[mid - 1] + nums[mid]) / 2;
+// }
 
 assert(median([1, 2, 3, 4, 5]), 3.0, "Exercise 62");
 assert(median([1, 2, 3]), 2.0, "Exercise 62");

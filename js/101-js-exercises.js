@@ -1075,10 +1075,15 @@ addToDone("Exercise 62 is correct.")
 
 // Exercise 63
 // Write a function definition named maxMinusMin that takes in an array of numbers and returns the difference of the maximum minus theminimum.
-function maxMinusMin(arr) {
-    arr.sort()
-    return arr[arr.length -1] - arr[0];
+const maxMinusMin = arr => {    // es6 refactor
+    let sortArr = arr.sort();
+    return sortArr[arr.length -1] - sortArr[0];
 }
+
+// function maxMinusMin(arr) {
+//     arr.sort()
+//     return arr[arr.length -1] - arr[0];
+// }
 
 assert(maxMinusMin([1, 2, 2, 8, 3, 4]), 7, "Exercise 63");
 assert(maxMinusMin([1, 1, 2, 3, 9]), 8, "Exercise 63");
@@ -1088,13 +1093,16 @@ addToDone("Exercise 63 is correct.")
 
 // Exercise 64
 // Write a function definition named productOfAll that takes in sequence of numbers and returns the product of multiplying all the numbers together
-function productOfAll(seq) {
-    var sum = 1;
-    for(var i = 0; i < seq.length; i += 1) {
-        sum = sum * seq[i];
-    }
-    return sum;
-}
+const productOfAll = arr => arr.reduce((a, b) => a * b);    // es6 refactor
+
+
+// function productOfAll(seq) {
+//     var sum = 1;
+//     for(var i = 0; i < seq.length; i += 1) {
+//         sum = sum * seq[i];
+//     }
+//     return sum;
+// }
 
 assert(productOfAll([1, 2, 3]), 6, "Exercise 64");
 assert(productOfAll([3, 4, 5]), 60, "Exercise 64");
@@ -1104,10 +1112,15 @@ addToDone("Exercise 64 is correct.")
 
 // Exercise 65
 // Write a function definition named getHighestNumber that takes in sequence of numbers and returns the largest number.
-function getHighestNumber(seq) {
-    seq.sort();
-    return seq[seq.length - 1];
+const getHighestNumber = arr => {   // es6 refactor
+    let sortArr = arr.sort();
+    return sortArr[sortArr.length - 1];
 }
+
+// function getHighestNumber(seq) {
+//     seq.sort();
+//     return seq[seq.length - 1];
+// }
 
 assert(getHighestNumber([1, 2, 3]), 3, "Exercise 65");
 assert(getHighestNumber([1, 5, 2, 3, 4]), 5, "Exercise 65");

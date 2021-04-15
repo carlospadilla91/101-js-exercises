@@ -1130,10 +1130,15 @@ addToDone("Exercise 65 is correct.")
 
 // Exercise 66
 // Write a function definition named getSmallestNumber that takes in sequence of numbers and returns the smallest number.
-function getSmallestNumber(seq) {
-    seq.sort();
-    return seq[0];
+const getSmallestNumber = arr => {  // es6 refactor
+    let sortArr =  arr.sort();
+    return sortArr[0];
 }
+
+// function getSmallestNumber(seq) {
+//     seq.sort();
+//     return seq[0];
+// }
 
 assert(getSmallestNumber([1, 2, 3]), 1, "Exercise 66");
 assert(getSmallestNumber([3, 5, 9, 8, 1]), 1, "Exercise 66");
@@ -1143,15 +1148,17 @@ addToDone("Exercise 66 is correct.")
 
 // Exercise 67
 // Write a function definition named onlyOddNumbers that takes in sequence of numbers and returns the odd numbers in an array.
-function onlyOddNumbers(arr) {
-    var odds = [];
-    for(var i = 0; i < arr.length; i += 1) {
-        if(isOdd(arr[i])) {
-            odds.push(arr[i]);
-        }
-    }
-    return odds;
-}
+const onlyOddNumbers = arr => arr.filter(n => n % 2 !== 0); // es6 refactor
+
+// function onlyOddNumbers(arr) {
+//     var odds = [];
+//     for(var i = 0; i < arr.length; i += 1) {
+//         if(isOdd(arr[i])) {
+//             odds.push(arr[i]);
+//         }
+//     }
+//     return odds;
+// }
 
 assert(onlyOddNumbers([1, 2, 3]), [1, 3], "Exercise 67");
 assert(onlyOddNumbers([-5, -4, -3, -2, -1, 1, 2, 3, 4, 5]), [-5, -3, -1, 1, 3, 5], "Exercise 67");
@@ -1160,15 +1167,17 @@ addToDone("Exercise 67 is correct.")
 
 // Exercise 68
 // Write a function definition named onlyEvenNumbers that takes in sequence of numbers and returns the even numbers in an array.
-function onlyEvenNumbers(arr) {
-    var evens = [];
-    for(var i = 0; i < arr.length; i += 1) {
-        if(isEven(arr[i])) {
-            evens.push(arr[i]);
-        }
-    }
-    return evens;
-}
+const onlyEvenNumbers = arr => arr.filter(n => n % 2 === 0);    // es6 refactor
+
+// function onlyEvenNumbers(arr) {
+//     var evens = [];
+//     for(var i = 0; i < arr.length; i += 1) {
+//         if(isEven(arr[i])) {
+//             evens.push(arr[i]);
+//         }
+//     }
+//     return evens;
+// }
 
 assert(onlyEvenNumbers([1, 2, 3]), [2], "Exercise 68");
 assert(onlyEvenNumbers([-5, -4, -3, -2, -1, 1, 2, 3, 4, 5]), [-4, -2, 2, 4], "Exercise 68");
@@ -1178,15 +1187,17 @@ addToDone("Exercise 68 is correct.")
 
 // Exercise 69
 // Write a function definition named onlyPositiveNumbers that takes in sequence of numbers and returns the positive numbers in an array.
-function onlyPositiveNumbers(arr) {
-    var positives = [];
-    for(var i = 0; i < arr.length; i += 1) {
-        if(isPositive(arr[i])) {
-            positives.push(arr[i]);
-        }
-    }
-    return positives;
-}
+const onlyPositiveNumbers = arr => arr.filter(n => n > 0);  // es6 refactor
+
+// function onlyPositiveNumbers(arr) {
+//     var positives = [];
+//     for(var i = 0; i < arr.length; i += 1) {
+//         if(isPositive(arr[i])) {
+//             positives.push(arr[i]);
+//         }
+//     }
+//     return positives;
+// }
 
 assert(onlyPositiveNumbers([1, 2, 3]), [1, 2, 3], "Exercise 69");
 assert(onlyPositiveNumbers([-5, -4, -3, -2, -1, 1, 2, 3, 4, 5]), [1, 2, 3, 4, 5], "Exercise 69");
@@ -1196,15 +1207,17 @@ addToDone("Exercise 69 is correct.")
 
 // Exercise 70
 // Write a function definition named onlyNegativeNumbers that takes in sequence of numbers and returns the negative numbers in an array.
-function onlyNegativeNumbers(arr) {
-    var negatives = [];
-    for(var i = 0; i < arr.length; i += 1) {
-        if(isNegative(arr[i])) {
-            negatives.push(arr[i]);
-        }
-    }
-    return negatives;
-}
+const onlyNegativeNumbers = arr => arr.filter(n => n < 0);  // es6 refactor
+
+// function onlyNegativeNumbers(arr) {
+//     var negatives = [];
+//     for(var i = 0; i < arr.length; i += 1) {
+//         if(isNegative(arr[i])) {
+//             negatives.push(arr[i]);
+//         }
+//     }
+//     return negatives;
+// }
 
 assert(onlyNegativeNumbers([1, 2, 3]), [], "Exercise 70");
 assert(onlyNegativeNumbers([-5, -4, -3, -2, -1, 1, 2, 3, 4, 5]), [-5, -4, -3, -2, -1], "Exercise 70");

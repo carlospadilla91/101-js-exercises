@@ -1310,15 +1310,25 @@ addToDone("Exercise 73 is correct.")
 
 // Exercise 74
 // Write a function definition named countOdds that takes in sequence of numbers and returns a count of the any odd numbers in the sequence
-function countOdds(arr) {
-    var count = 0
-    for(var i = 0; i < arr.length; i += 1) {
-        if(isOdd(arr[i])) {
+const countOdds = arr => {      // es6 refactor
+    let count = 0;
+    arr.forEach((e, i) => {
+        if (isOdd(arr[i])) {
             count++
         }
-    }
+    })
     return count;
 }
+
+// function countOdds(arr) {
+//     var count = 0
+//     for(var i = 0; i < arr.length; i += 1) {
+//         if(isOdd(arr[i])) {
+//             count++
+//         }
+//     }
+//     return count;
+// }
 
 assert(countOdds([1, 2, 3]), 2, "Exercise 74");
 assert(countOdds([2, 5, 6]), 1, "Exercise 74");

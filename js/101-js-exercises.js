@@ -1227,14 +1227,23 @@ addToDone("Exercise 70 is correct.");
 
 // Exercise 71
 // Write a function definition named hasEvens that takes in sequence of numbers and returns true if there are any even numbers in the sequence
-function hasEvens(arr) {
-    for(var i = 0; i < arr.length; i += 1) {
-        if(isEven(arr[i])) {
-            return true;
+const hasEvens = arr => {       // es6 refactor
+    for (let i = 0; i < arr.length; i += 1) {
+        if (isEven(arr[i])) {
+            return true
         }
     }
     return false;
 }
+
+// function hasEvens(arr) {
+//     for(var i = 0; i < arr.length; i += 1) {
+//         if(isEven(arr[i])) {
+//             return true;
+//         }
+//     }
+//     return false;
+// }
 
 assert(hasEvens([1, 2, 3]), true, "Exercise 71");
 assert(hasEvens([2, 5, 6]), true, "Exercise 71");
@@ -1245,15 +1254,25 @@ addToDone("Exercise 71 is correct.");
 
 // Exercise 72
 // Write a function definition named countEvens that takes in sequence of numbers and returns the number of even numbers
-function countEvens(arr) {
-    var count = 0
-    for(var i = 0; i < arr.length; i += 1) {
-        if(isEven(arr[i])) {
+const countEvens = arr => {     // es6 refactor
+    let count = 0;
+    arr.forEach((e, i) => {
+        if (isEven(arr[i])) {
             count++
         }
-    }
+    })
     return count;
 }
+
+// function countEvens(arr) {
+//     var count = 0
+//     for(var i = 0; i < arr.length; i += 1) {
+//         if(isEven(arr[i])) {
+//             count++
+//         }
+//     }
+//     return count;
+// }
 
 assert(countEvens([1, 2, 3]), 1, "Exercise 72");
 assert(countEvens([2, 5, 6]), 2, "Exercise 72");
@@ -1264,14 +1283,23 @@ addToDone("Exercise 72 is correct.")
 
 // Exercise 73
 // Write a function definition named hasOdds that takes in sequence of numbers and returns true if there are any odd numbers in the sequence
-function hasOdds(arr) {
-    for(var i = 0; i < arr.length; i += 1) {
-        if(isOdd(arr[i])) {
+const hasOdds = arr => {        // es6 refactor
+    for (let i = 0; i < arr.length; i += 1) {
+        if (isOdd(arr[i])) {
             return true;
         }
     }
     return false;
 }
+
+// function hasOdds(arr) {
+//     for(var i = 0; i < arr.length; i += 1) {
+//         if(isOdd(arr[i])) {
+//             return true;
+//         }
+//     }
+//     return false;
+// }
 
 assert(hasOdds([1, 2, 3]), true, "Exercise 73");
 assert(hasOdds([2, 5, 6]), true, "Exercise 73");

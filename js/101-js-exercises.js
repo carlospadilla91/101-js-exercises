@@ -1339,15 +1339,25 @@ addToDone("Exercise 74 is correct.")
 
 // Exercise 75
 // Write a function definition named countNegatives that takes in sequence of numbers and returns a count of the number of negative numbers
-function countNegatives(arr) {
-    var count = 0;
-    for(var i = 0; i < arr.length; i += 1) {
-        if(isNegative(arr[i])) {
+const countNegatives = arr => {     // es6 syntax
+    let count = 0;
+    arr.forEach((e, i) => {
+        if (isNegative(arr[i])) {
             count++
         }
-    }
+    })
     return count;
 }
+
+// function countNegatives(arr) {
+//     var count = 0;
+//     for(var i = 0; i < arr.length; i += 1) {
+//         if(isNegative(arr[i])) {
+//             count++
+//         }
+//     }
+//     return count;
+// }
 
 assert(countNegatives([1, -2, 3]), 1, "Exercise 75");
 assert(countNegatives([2, -5, -6]), 2, "Exercise 75");
@@ -1357,15 +1367,25 @@ addToDone("Exercise 75 is correct.")
 
 // Exercise 76
 // Write a function definition named countPositives that takes in sequence of numbers and returns a count of the number of positive numbers
-function countPositives(arr) {
-    var count = 0;
-    for(var i = 0; i < arr.length; i += 1) {
-        if(isPositive(arr[i])) {
+const countPositives = arr => {     // es6 syntax
+    let count = 0;
+    arr.forEach((e, i) => {
+        if (isPositive(arr[i])) {
             count++
         }
-    }
+    })
     return count;
 }
+
+// function countPositives(arr) {
+//     var count = 0;
+//     for(var i = 0; i < arr.length; i += 1) {
+//         if(isPositive(arr[i])) {
+//             count++
+//         }
+//     }
+//     return count;
+// }
 
 assert(countPositives([1, -2, 3]), 2, "Exercise 76");
 assert(countPositives([2, -5, -6]), 1, "Exercise 76");

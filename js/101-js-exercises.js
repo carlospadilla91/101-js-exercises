@@ -1396,15 +1396,17 @@ addToDone("Exercise 76 is correct.")
 
 // Exercise 77
 // Write a function definition named onlyPositiveEvens that takes in sequence of numbers and returns an array containing all the positive evens from the sequence
-function onlyPositiveEvens(arr) {
-    var positivesAndEvens = [];
-    for(var i = 0; i < arr.length; i += 1) {
-        if(isEven(arr[i]) && isPositive(arr[i])) {
-            positivesAndEvens.push(arr[i]);
-        }
-    }
-    return positivesAndEvens;
-}
+const onlyPositiveEvens = arr => arr.filter(n => n % 2 === 0 && n > 0);     // es6 syntax
+
+// function onlyPositiveEvens(arr) {
+//     var positivesAndEvens = [];
+//     for(var i = 0; i < arr.length; i += 1) {
+//         if(isEven(arr[i]) && isPositive(arr[i])) {
+//             positivesAndEvens.push(arr[i]);
+//         }
+//     }
+//     return positivesAndEvens;
+// }
 
 assert(onlyPositiveEvens([1, -2, 3]), [], "Exercise 77");
 assert(onlyPositiveEvens([2, -5, -6]), [2], "Exercise 77");
@@ -1415,15 +1417,17 @@ addToDone("Exercise 77 is correct.")
 
 // Exercise 78
 // Write a function definition named onlyPositiveOdds that takes in sequence of numbers and returns an array containing all the positive odd numbers from the sequence
-function onlyPositiveOdds(arr) {
-    var positiveAndOdds = [];
-    for(var i = 0; i < arr.length; i += 1) {
-        if(isPositive(arr[i]) && isOdd(arr[i])) {
-            positiveAndOdds.push(arr[i]);
-        }
-    }
-    return positiveAndOdds;
-}
+const onlyPositiveOdds = arr => arr.filter(n => n % 2 !== 0 && n > 0);      // es6 syntax
+
+// function onlyPositiveOdds(arr) {
+//     var positiveAndOdds = [];
+//     for(var i = 0; i < arr.length; i += 1) {
+//         if(isPositive(arr[i]) && isOdd(arr[i])) {
+//             positiveAndOdds.push(arr[i]);
+//         }
+//     }
+//     return positiveAndOdds;
+// }
 
 assert(onlyPositiveOdds([1, -2, 3]), [1, 3], "Exercise 78");
 assert(onlyPositiveOdds([2, -5, -6]), [], "Exercise 78");
@@ -1434,15 +1438,17 @@ addToDone("Exercise 78 is correct.")
 
 // Exercise 79
 // Write a function definition named onlyNegativeEvens that takes in sequence of numbers and returns an array containing all the negative even numbers from the sequence
-function onlyNegativeEvens(arr) {
-    var negativeAndEvens = [];
-    for(var i = 0; i < arr.length; i += 1) {
-        if(isNegative(arr[i]) && isEven(arr[i])) {
-            negativeAndEvens.push(arr[i]);
-        }
-    }
-    return negativeAndEvens;
-}
+const onlyNegativeEvens = arr => arr.filter(n => n % 2 === 0 && n < 0);     // es6 syntax
+
+// function onlyNegativeEvens(arr) {
+//     var negativeAndEvens = [];
+//     for(var i = 0; i < arr.length; i += 1) {
+//         if(isNegative(arr[i]) && isEven(arr[i])) {
+//             negativeAndEvens.push(arr[i]);
+//         }
+//     }
+//     return negativeAndEvens;
+// }
 
 assert(onlyNegativeEvens([1, -2, 3]), [-2], "Exercise 79");
 assert(onlyNegativeEvens([2, -5, -6]), [-6], "Exercise 79");
@@ -1453,15 +1459,17 @@ addToDone("Exercise 79 is correct.")
 
 // Exercise 80
 // Write a function definition named onlyNegativeOdds that takes in sequence of numbers and returns an array containing all the negative odd numbers from the sequence
-function onlyNegativeOdds(arr) {
-    var negativeAndOdds = [];
-    for(var i = 0; i < arr.length; i += 1) {
-        if(isNegative(arr[i]) && isOdd(arr[i])) {
-            negativeAndOdds.push(arr[i]);
-        }
-    }
-    return negativeAndOdds;
-}
+const onlyNegativeOdds = arr => arr.filter(n => n % 2 !== 0 && n < 0);      // es6 syntax
+
+// function onlyNegativeOdds(arr) {
+//     var negativeAndOdds = [];
+//     for(var i = 0; i < arr.length; i += 1) {
+//         if(isNegative(arr[i]) && isOdd(arr[i])) {
+//             negativeAndOdds.push(arr[i]);
+//         }
+//     }
+//     return negativeAndOdds;
+// }
 
 assert(onlyNegativeOdds([1, -2, 3]), [], "Exercise 80");
 assert(onlyNegativeOdds([2, -5, -6]), [-5], "Exercise 80");

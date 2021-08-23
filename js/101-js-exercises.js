@@ -1546,12 +1546,15 @@ addToDone("Exercise 83 is correct.")
 
 // Exercise 84
 // Write a function definition named elementsTimesTwo that takes in an array of numbers and returns an array with each value multiplied by 2.
-function elementsTimesTwo(arr) {
-    for(var i = 0; i < arr.length; i += 1) {
-        arr[i] *= 2;
-    }
-    return arr;
-}
+const elementsTimesTwo = arr => arr.map((n) => n * 2);
+
+
+// function elementsTimesTwo(arr) {
+//     for(var i = 0; i < arr.length; i += 1) {
+//         arr[i] *= 2;
+//     }
+//     return arr;
+// }
 
 assert(elementsTimesTwo([1, 2, 3]), [2, 4, 6], "Exercise 84")
 assert(elementsTimesTwo([0, 0, 0]), [0, 0, 0], "Exercise 84")
@@ -1572,12 +1575,15 @@ addToDone("Exercise 85 is correct.")
 
 // Exercise 86
 // Write a function definition named addOneToArray that adds one to every number in an array
-function addOneToArray(arr) {
-    for(var i = 0; i < arr.length; i += 1) {
-        arr[i] += 1;
-    }
-    return arr;
-}
+const addOneToArray = arr => arr.map((n) => n + 1);
+
+
+// function addOneToArray(arr) {
+//     for(var i = 0; i < arr.length; i += 1) {
+//         arr[i] += 1;
+//     }
+//     return arr;
+// }
 
 assert(addOneToArray([1, 2, 3]), [2, 3, 4], "Exercise 86");
 assert(addOneToArray([4, 4, 4]), [5, 5, 5], "Exercise 86");
@@ -1605,7 +1611,7 @@ const thomasPaper = {
 
 // Exercise 87
 // Write a function named getPaperTitle that takes in a object and returns the title property
-let getPaperTitle = obj => obj.title;
+const getPaperTitle = obj => obj.title;
 
 assert(getPaperTitle(tukeyPaper), "The Future of Data Analysis", "Exercise 87");
 assert(getPaperTitle(thomasPaper), "A mathematical model of glutathione metabolism", "Exercise 87");
@@ -1614,7 +1620,7 @@ addToDone("Exercise 87 is correct.")
 
 // Exercise 88
 // Write a function named getYearPublished that takes in an objects and returns the value behind the "year_published" key.
-let getYearPublished = obj => obj.year_published;
+const getYearPublished = obj => obj.year_published;
 
 assert(getYearPublished(tukeyPaper), 1962, "Exercise 88");
 assert(getYearPublished(thomasPaper), 2008, "Exercise 88");
@@ -1630,7 +1636,7 @@ const book = {
 
 // Exercise 89
 // Write a function named getPrice that takes in a object and returns the price
-let getPrice = obj => obj.price;
+const getPrice = obj => obj.price;
 
 assert(getPrice(book), 36.99, "Exercise 89");
 addToDone("Exercise 89 is complete.")
@@ -1639,7 +1645,7 @@ addToDone("Exercise 89 is complete.")
 
 // Exercise 90
 // Write a function named getBookAuthor that takes in a object (the above declared book variable) and returns the author's name
-let getBookAuthor = obj => obj.author;
+const getBookAuthor = obj => obj.author;
 
 assert(getBookAuthor(book), "Frances Buontempo", "Exercise 90");
 addToDone("Exercise 90 is complete.")
@@ -1674,7 +1680,7 @@ const books = [
 
 // Exercise 91
 // Write a function named getNumberOfBooks that takes in a array of objects and returns the number of objects in that array.
-let getNumberOfBooks = arr => arr.length;
+const getNumberOfBooks = arr => arr.length;
 
 assert(getNumberOfBooks(books), 4, "Exercise 91");
 addToDone("Exercise 91 is complete.")
@@ -1683,13 +1689,16 @@ addToDone("Exercise 91 is complete.")
 
 // Exercise 92
 // Write a function named totalOfBookPrices that takes in a array of objects and returns the sum total of all the book prices added together
-function totalOfBookPrices(arr) {
-    var sumOfPrices = 0;
-    for(var i = 0; i < arr.length; i += 1) {
-        sumOfPrices += arr[i].price;
-    }
-    return sumOfPrices;
-}
+const totalOfBookPrices = arr => arr.reduce((total, book) => total + book.price, 0);
+
+
+// function totalOfBookPrices(arr) {
+//     var sumOfPrices = 0;
+//     for(var i = 0; i < arr.length; i += 1) {
+//         sumOfPrices += arr[i].price;
+//     }
+//     return sumOfPrices;
+// }
 
 assert(totalOfBookPrices(books), 122.9, "Exercise 92")
 addToDone("Exercise 92 is complete.")
@@ -1697,6 +1706,9 @@ addToDone("Exercise 92 is complete.")
 
 // Exercise 93
 // Write a function named getAverageBookPrice that takes in a array of objects and returns the average book price.
+const getAverageBookPrice = arr =>
+
+
 function getAverageBookPrice(book) {
     var avgBookPrice = 0;
     books.forEach(function (book) {

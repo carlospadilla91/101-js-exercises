@@ -1706,16 +1706,16 @@ addToDone("Exercise 92 is complete.")
 
 // Exercise 93
 // Write a function named getAverageBookPrice that takes in a array of objects and returns the average book price.
-const getAverageBookPrice = arr =>
+const getAverageBookPrice = arr => arr.reduce((total, book) => total + book.price / arr.length, 0);
 
 
-function getAverageBookPrice(book) {
-    var avgBookPrice = 0;
-    books.forEach(function (book) {
-        avgBookPrice += book.price;
-    })
-    return avgBookPrice / book.length;
-}
+// function getAverageBookPrice(book) {
+//     var avgBookPrice = 0;
+//     books.forEach(function (book) {
+//         avgBookPrice += book.price;
+//     })
+//     return avgBookPrice / book.length;
+// }
 
 assert(getAverageBookPrice(books), 30.725, "Exercise 93");
 addToDone("Exercise 93 is complete.")
